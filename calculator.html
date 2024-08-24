@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI & CI Calculator with Basic Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-container">
+        <h1 class="glow">SI & CI Calculator</h1>
+    </div>
+
+    <div class="page-container">
+        <!-- Simple Calculator -->
+        <div class="simple-calculator">
+            <h2>Basic Calculator</h2>
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="calculateResult()">=</button>
+            </div>
+        </div>
+
+        <!-- SI & CI Calculator -->
+        <div class="container">
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="principal">Principal Amount:</label>
+                    <input type="number" id="principal" placeholder="Enter principal amount">
+                </div>
+                <div class="input-group">
+                    <label for="rate">Annual Interest Rate (%):</label>
+                    <input type="number" id="rate" placeholder="Enter interest rate">
+                </div>
+                <div class="input-group">
+                    <label for="time">Time (years):</label>
+                    <input type="number" id="time" placeholder="Enter time in years">
+                </div>
+                <div class="input-group">
+                    <label for="frequency">Compounding Frequency (times per year):</label>
+                    <input type="number" id="frequency" placeholder="Enter frequency for compound interest">
+                </div>
+                <button onclick="calculateInterest()">Calculate Interest</button>
+                <div class="results">
+                    <p>Simple Interest: <span id="simple-interest"></span></p>
+                    <p>Compound Interest: <span id="compound-interest"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
